@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="01-springCloud-common" />
+        <module name="02-springCloud-comsumer" />
+        <module name="03-springCloud-provider" />
+        <module name="04-springCloud-eureka" />
+        <module name="05-springCloud-consumer-feign" />
+        <module name="06-springCloud-hystrix-dashboard" />
+        <module name="07-springCloud-zuul" />
+        <module name="atcrowdfunding02-admin-webui" />
+        <module name="atcrowdfunding03-admin-component" />
+        <module name="atcrowdfunding04-admin-entity" />
+        <module name="atcrowdfunding05-common-util" />
+        <module name="atcrowdfunding06-common-reverse" />
+        <module name="atcrowdfunding08-member-eureka" />
+        <module name="atcrowdfunding09-member-entity" />
+        <module name="atcrowdfunding10-member-mysql-provider" />
+        <module name="atcrowdfunding11-member-redis-provider" />
+        <module name="atcrowdfunding12-member-authentication-consumer" />
+        <module name="atcrowdfunding13-member-project-consumer" />
+        <module name="atcrowdfunding14-member-order-consumer" />
+        <module name="atcrowdfunding15-member-pay-consumer" />
+        <module name="atcrowdfunding16-member-zuul" />
+        <module name="atcrowdfunding17-member-api" />
+        <module name="pro01-spring-annotation" />
+        <module name="pro02-springSecurity" />
+        <module name="pro04-short-message" />
+        <module name="pro05-springSession-get" />
+        <module name="pro05-springSession-save" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01-springCloud-common" target="1.8" />
+      <module name="01-springCloud-common (1)" target="1.8" />
+      <module name="02-springCloud-comsumer" target="1.8" />
+      <module name="02-springCloud-comsumer (1)" target="1.8" />
+      <module name="03-springCloud-provider" target="1.8" />
+      <module name="03-springCloud-provider (1)" target="1.8" />
+      <module name="04-springCloud-eureka" target="1.8" />
+      <module name="04-springCloud-eureka (1)" target="1.8" />
+      <module name="05-springCloud-consumer-feign" target="1.8" />
+      <module name="05-springCloud-consumer-feign (1)" target="1.8" />
+      <module name="06-springCloud-hystrix-dashboard" target="1.8" />
+      <module name="06-springCloud-hystrix-dashboard (1)" target="1.8" />
+      <module name="07-springCloud-zuul" target="1.8" />
+      <module name="07-springCloud-zuul (1)" target="1.8" />
+      <module name="atcrowdfunding01-admin-parent" target="1.8" />
+      <module name="atcrowdfunding01-admin-parent (1)" target="1.8" />
+      <module name="atcrowdfunding01-admin-parent (2)" target="1.8" />
+      <module name="atcrowdfunding02-admin-webui" target="1.8" />
+      <module name="atcrowdfunding02-admin-webui (1)" target="1.7" />
+      <module name="atcrowdfunding03-admin-component" target="1.8" />
+      <module name="atcrowdfunding03-admin-component (1)" target="1.8" />
+      <module name="atcrowdfunding04-admin-entity" target="1.8" />
+      <module name="atcrowdfunding04-admin-entity (1)" target="1.8" />
+      <module name="atcrowdfunding05-common-util" target="1.8" />
+      <module name="atcrowdfunding05-common-util (1)" target="1.8" />
+      <module name="atcrowdfunding06-common-reverse" target="1.8" />
+      <module name="atcrowdfunding06-common-reverse (1)" target="1.8" />
+      <module name="atcrowdfunding07-member-parent" target="1.8" />
+      <module name="atcrowdfunding07-member-parent (1)" target="1.8" />
+      <module name="atcrowdfunding08-member-eureka" target="1.8" />
+      <module name="atcrowdfunding08-member-eureka (1)" target="1.8" />
+      <module name="atcrowdfunding09-member-entity" target="1.8" />
+      <module name="atcrowdfunding09-member-entity (1)" target="1.8" />
+      <module name="atcrowdfunding10-member-mysql-provider" target="1.8" />
+      <module name="atcrowdfunding10-member-mysql-provider (1)" target="1.8" />
+      <module name="atcrowdfunding11-member-redis-provider" target="1.8" />
+      <module name="atcrowdfunding11-member-redis-provider (1)" target="1.8" />
+      <module name="atcrowdfunding12-member-authentication-consumer" target="1.8" />
+      <module name="atcrowdfunding12-member-authentication-consumer (1)" target="1.8" />
+      <module name="atcrowdfunding13-member-project-consumer" target="1.8" />
+      <module name="atcrowdfunding13-member-project-consumer (1)" target="1.8" />
+      <module name="atcrowdfunding14-member-order-consumer" target="1.8" />
+      <module name="atcrowdfunding14-member-order-consumer (1)" target="1.8" />
+      <module name="atcrowdfunding15-member-pay-consumer" target="1.8" />
+      <module name="atcrowdfunding15-member-pay-consumer (1)" target="1.8" />
+      <module name="atcrowdfunding16-member-zuul" target="1.8" />
+      <module name="atcrowdfunding16-member-zuul (1)" target="1.8" />
+      <module name="atcrowdfunding17-member-api" target="1.8" />
+      <module name="atcrowdfunding17-member-api (1)" target="1.8" />
+      <module name="pro01-spring-annotation" target="1.8" />
+      <module name="pro01-spring-annotation (1)" target="1.8" />
+      <module name="pro02-springSecurity" target="1.8" />
+      <module name="pro02-springSecurity (1)" target="1.8" />
+      <module name="pro03-springCloud-parent" target="1.8" />
+      <module name="pro03-springCloud-parent (1)" target="1.8" />
+      <module name="pro04-short-message" target="1.8" />
+      <module name="pro05-springSession-get" target="1.8" />
+      <module name="pro05-springSession-save" target="1.8" />
+      <module name="pro06-springSession-get" target="1.8" />
+      <module name="project-atcrowdfunding" target="1.8" />
+      <module name="project2-atcrowdfunding" target="1.8" />
+      <module name="qwe" target="1.8" />
+      <module name="w" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

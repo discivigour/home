@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="project_use">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="project_crowdfund_atguigu">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="ct-200715"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="junior_database_class_study"/>
+    <schema id="6" parent="1" name="myemployees"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="mysql必知必会"/>
+    <schema id="9" parent="1" name="performance_schema"/>
+    <schema id="10" parent="1" name="sakila"/>
+    <schema id="11" parent="1" name="security"/>
+    <schema id="12" parent="1" name="ssm-crud-200711"/>
+    <schema id="13" parent="1" name="sys"/>
+    <schema id="14" parent="1" name="test_mybatis_atguigu"/>
+    <schema id="15" parent="1" name="world"/>
+    <table id="16" parent="2" name="inner_admin_role"/>
+    <table id="17" parent="2" name="inner_role_auth"/>
+    <table id="18" parent="2" name="t_admin"/>
+    <table id="19" parent="2" name="t_auth"/>
+    <table id="20" parent="2" name="t_member"/>
+    <table id="21" parent="2" name="t_member_confirm_info"/>
+    <table id="22" parent="2" name="t_member_launch_info"/>
+    <table id="23" parent="2" name="t_menu"/>
+    <table id="24" parent="2" name="t_project"/>
+    <table id="25" parent="2" name="t_project_item_pic"/>
+    <table id="26" parent="2" name="t_project_tag"/>
+    <table id="27" parent="2" name="t_project_type"/>
+    <table id="28" parent="2" name="t_return"/>
+    <table id="29" parent="2" name="t_role"/>
+    <table id="30" parent="2" name="t_tag"/>
+    <table id="31" parent="2" name="t_type"/>
+    <column id="32" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="33" parent="16" name="admin_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="34" parent="16" name="role_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="35" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="17" name="role_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="38" parent="17" name="auth_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="39" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="18" name="login_acct">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="18" name="user_pswd">
+      <Position>3</Position>
+      <DataType>char(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="18" name="user_name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="18" name="email">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="18" name="create_time">
+      <Position>6</Position>
+      <DataType>char(19)|0</DataType>
+    </column>
+    <index id="46" parent="18" name="login_acct">
+      <ColNames>login_acct</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="47" parent="18" name="login_acct_2">
+      <ColNames>login_acct</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="48" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="49" parent="18" name="login_acct">
+      <ColNames>login_acct</ColNames>
+      <UnderlyingIndexName>login_acct</UnderlyingIndexName>
+    </key>
+    <key id="50" parent="18" name="login_acct_2">
+      <ColNames>login_acct</ColNames>
+      <UnderlyingIndexName>login_acct_2</UnderlyingIndexName>
+    </key>
+    <column id="51" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="52" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="53" parent="19" name="title">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="54" parent="19" name="category_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="55" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="56" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="57" parent="20" name="loginacct">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="20" name="userpswd">
+      <Position>3</Position>
+      <DataType>char(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="20" name="username">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="60" parent="20" name="email">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="61" parent="20" name="authstatus">
+      <Position>6</Position>
+      <Comment>实名认证状态 0 - 未实名认证， 1 - 实名认证申请中， 2 - 已实名认证</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="62" parent="20" name="usertype">
+      <Position>7</Position>
+      <Comment> 0 - 个人， 1 - 企业</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="63" parent="20" name="realname">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="64" parent="20" name="cardnum">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="65" parent="20" name="accttype">
+      <Position>10</Position>
+      <Comment>0 - 企业， 1 - 个体， 2 - 个人， 3 - 政府</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <key id="66" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="67" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="68" parent="21" name="memberid">
+      <Position>2</Position>
+      <Comment>会员 id</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="69" parent="21" name="paynum">
+      <Position>3</Position>
+      <Comment>易付宝企业账号</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="70" parent="21" name="cardnum">
+      <Position>4</Position>
+      <Comment>法人身份证号</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="71" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="72" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="73" parent="22" name="memberid">
+      <Position>2</Position>
+      <Comment>会员 id</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="74" parent="22" name="description_simple">
+      <Position>3</Position>
+      <Comment>简单介绍</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="75" parent="22" name="description_detail">
+      <Position>4</Position>
+      <Comment>详细介绍</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="76" parent="22" name="phone_num">
+      <Position>5</Position>
+      <Comment>联系电话</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="77" parent="22" name="service_num">
+      <Position>6</Position>
+      <Comment>客服电话</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="78" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="79" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="80" parent="23" name="pid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="81" parent="23" name="name">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="82" parent="23" name="url">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="83" parent="23" name="icon">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="84" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="85" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="86" parent="24" name="project_name">
+      <Position>2</Position>
+      <Comment>项目名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="87" parent="24" name="project_description">
+      <Position>3</Position>
+      <Comment>项目描述</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="88" parent="24" name="money">
+      <Position>4</Position>
+      <Comment>筹集金额</Comment>
+      <DataType>bigint(11)|0</DataType>
+    </column>
+    <column id="89" parent="24" name="day">
+      <Position>5</Position>
+      <Comment>筹集天数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="90" parent="24" name="status">
+      <Position>6</Position>
+      <Comment>0-即将开始， 1-众筹中， 2-众筹成功， 3-众筹失败
+</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="91" parent="24" name="deploydate">
+      <Position>7</Position>
+      <Comment>项目发起时间</Comment>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="92" parent="24" name="supportmoney">
+      <Position>8</Position>
+      <Comment>已筹集到的金额</Comment>
+      <DataType>bigint(11)|0</DataType>
+    </column>
+    <column id="93" parent="24" name="supporter">
+      <Position>9</Position>
+      <Comment>支持人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="94" parent="24" name="completion">
+      <Position>10</Position>
+      <Comment>百分比完成度</Comment>
+      <DataType>int(3)|0</DataType>
+    </column>
+    <column id="95" parent="24" name="memberid">
+      <Position>11</Position>
+      <Comment>发起人的会员 id</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="96" parent="24" name="createdate">
+      <Position>12</Position>
+      <Comment>项目创建时间</Comment>
+      <DataType>varchar(19)|0</DataType>
+    </column>
+    <column id="97" parent="24" name="follower">
+      <Position>13</Position>
+      <Comment>关注人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="98" parent="24" name="header_picture_path">
+      <Position>14</Position>
+      <Comment>头图路径</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="99" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="100" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="101" parent="25" name="projectid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="102" parent="25" name="item_pic_path">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="103" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="104" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="105" parent="26" name="projectid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="106" parent="26" name="tagid">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="107" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="108" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="109" parent="27" name="projectid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="110" parent="27" name="typeid">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="111" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="112" parent="28" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="113" parent="28" name="projectid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="114" parent="28" name="type">
+      <Position>3</Position>
+      <Comment>0 - 实物回报， 1 虚拟物品回报</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="115" parent="28" name="supportmoney">
+      <Position>4</Position>
+      <Comment>支持金额</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="116" parent="28" name="content">
+      <Position>5</Position>
+      <Comment>回报内容</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="117" parent="28" name="count">
+      <Position>6</Position>
+      <Comment>回报产品限额， “0” 为不限回报数量</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="118" parent="28" name="signalpurchase">
+      <Position>7</Position>
+      <Comment>是否设置单笔限购</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="119" parent="28" name="purchase">
+      <Position>8</Position>
+      <Comment>具体限购数量</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="120" parent="28" name="freight">
+      <Position>9</Position>
+      <Comment>运费， “0” 为包邮</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="121" parent="28" name="invoice">
+      <Position>10</Position>
+      <Comment>0 - 不开发票， 1 - 开发票</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="122" parent="28" name="returndate">
+      <Position>11</Position>
+      <Comment>项目结束后多少天向支持者发送回报</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="123" parent="28" name="describ_pic_path">
+      <Position>12</Position>
+      <Comment>说明图片路径</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="124" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="125" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="126" parent="29" name="name">
+      <Position>2</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <key id="127" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="128" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="129" parent="30" name="pid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="130" parent="30" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="131" parent="30" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="132" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="133" parent="31" name="name">
+      <Position>2</Position>
+      <Comment>分类名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="134" parent="31" name="remark">
+      <Position>3</Position>
+      <Comment>分类介绍</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="135" parent="31" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

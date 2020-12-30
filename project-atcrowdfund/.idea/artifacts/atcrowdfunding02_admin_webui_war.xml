@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="atcrowdfunding02-admin-webui:war">
+    <output-path>$PROJECT_DIR$/atcrowdfunding01-admin-parent/atcrowdfunding02-admin-webui/target</output-path>
+    <root id="archive" name="atcrowdfunding02-admin-webui.war">
+      <element id="artifact" artifact-name="atcrowdfunding02-admin-webui:war exploded" />
+    </root>
+  </artifact>
+</component>

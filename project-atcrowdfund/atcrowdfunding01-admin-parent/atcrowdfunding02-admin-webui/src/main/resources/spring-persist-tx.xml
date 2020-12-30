@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+    <context:component-scan base-package="com.atguigu.crowd.service"/>
+    <!-- 配置 BCryptPasswordEncoder 的 bean -->
+    <bean id="passwordEncoder"
+          class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <!-- 1 配置事务管理器 -->
+    <bean id="dataSourceTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!-- 装配数据源 这里的ref引用的是另一个spring配置文件中的数据源-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 2 配置 AOP -->
+    <aop:config>
+        <!-- 配置切入点表达式 -->
+        <!-- public String com.atguigu.crowd.service.AdminService.getXxx(Integer id) -->
+        <aop:pointcut expression="execution(* *..*ServiceImpl.*(..))" id="txPointCut"/>
+        <!-- 将事务通知和切入点表达式关联到一起 -->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>
+    </aop:config>
+    <!-- 3 配置事务通知 就是给对应方法添加事务的性质 -->
+    <!-- id 属性用于在 aop:advisor 中引用事务通知 -->
+    <!-- transaction-manager 属性用于引用事务管理器， 如果事务管理器的 bean 的 id 正好是
+    transactionManager， 可以省略这个属性 -->
+    <tx:advice id="txAdvice" transaction-manager="dataSourceTransactionManager">
+        <tx:attributes>
+            <!-- name 属性指定当前要配置的事务方法的方法名 -->
+            <!-- 查询的方法通常设置为只读， 便于数据库根据只读属性进行相关性能优化 -->
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="query*" read-only="true"/>
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="count*" read-only="true"/>
+            <!-- 增删改方法另外配置 -->
+            <!-- propagation 属性配置事务方法的传播行为 -->
+            <!-- 默认值： REQUIRED 表示： 当前方法必须运行在事务中， 如果没有事务， 则开
+            启事务， 在自己的事务中运行。 如果已经有了已开启的事务， 则在当前事务中运行。 有可能
+            和其他方法共用同一个事务。 -->
+            <!-- 建议值： REQUIRES_NEW 表示： 当前方法必须运行在事务中， 如果没有事务，
+            则开启事务， 在自己的事务中运行。 和 REQUIRED 的区别是就算现在已经有了已开启的事务，
+            也一定要开启自己的事务， 避免和其他方法共用同一个事务。 -->
+            <!-- rollback-for 属性配置回滚的异常 -->
+            <!-- 默认值： 运行时异常 -->
+            <!-- 建议值： 编译时异常+运行时异常 -->
+            <tx:method name="save*" propagation="REQUIRES_NEW"
+                       rollback-for="java.lang.Exception"/>
+            <tx:method name="remove*" propagation="REQUIRES_NEW"
+                       rollback-for="java.lang.Exception"/>
+            <tx:method name="update*" propagation="REQUIRES_NEW"
+                       rollback-for="java.lang.Exception"/>
+        </tx:attributes>
+    </tx:advice>
+</beans>

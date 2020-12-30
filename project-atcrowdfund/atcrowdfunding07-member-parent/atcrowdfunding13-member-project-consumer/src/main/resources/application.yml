@@ -1,0 +1,24 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: atguigu-crowd-project
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 192.168.183.111
+  session:
+    store-type: redis
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+aliyun:
+  oss:
+    access-key-id: LTAI4FyZah3venX36Y5KT36d
+    access-key-secret: 4lOiREvfuLqPdJJqU4Do992lJ7ZxTc
+    bucket-domain: http://atguigu-201124.oss-cn-chengdu.aliyuncs.com
+    bucket-name: atguigu-201124
+    end-point: http://oss-cn-chengdu.aliyuncs.com

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../atcrowdfunding-admin-parent/atcrowdfunding02-admin-webui" />
+    <file type="web" url="file://$PROJECT_DIR$/../atcrowdfunding-admin-parent/pro02-springSecurity" />
+    <file type="web" url="file://$PROJECT_DIR$/atcrowdfunding01-admin-parent/atcrowdfunding02-admin-webui" />
+    <file type="web" url="file://$PROJECT_DIR$/atcrowdfunding01-admin-parent/pro02-springSecurity" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../atcrowdfunding-admin-parent/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

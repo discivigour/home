@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+    <!-- 配置自动扫描的包：扫描handler -->
+    <context:component-scan base-package="com.atguigu.crowd.mvc"/>
+
+    <!-- 配置视图解析器 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    <!--请求不经过处理，直接到前端页面-->
+    <mvc:view-controller path="/index.html" view-name="admin-login"/>
+    <mvc:view-controller path="/admin/to/login/page.html" view-name="admin-login"/>
+    <mvc:view-controller path="/admin/to/main/page.html" view-name="admin-main"/>
+    <mvc:view-controller path="/admin/to/addPage.html" view-name="admin-add"/>
+    <mvc:view-controller path="/role/to/page.html" view-name="role-page"/>
+    <mvc:view-controller path="/menu/to/page.html" view-name="menu-page"/>
+    <!--<mvc:view-controller path="/admin/to/editPage.html" view-name="admin-edit"/>-->
+    <!-- 配置SpringMVC的注解驱动 -->
+    <mvc:annotation-driven/>
+        <!--配置了SpringSecurity之后就不需要再手动配置拦截器了，security会帮我们拦截-->
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/**"/>-->
+            <!--&lt;!&ndash; mvc:exclude-mapping 配置不拦截的资源 &ndash;&gt;-->
+            <!--&lt;!&ndash;<mvc:exclude-mapping path="/admin/to/login/page.html"/>&ndash;&gt;-->
+            <!--<mvc:exclude-mapping path="/admin/do/login.html"/>-->
+            <!--<mvc:exclude-mapping path="/admin/do/logout.html"/>-->
+            <!--<bean class="com.atguigu.crowd.mvc.interceptor.LoginInterceptor"/>-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
+    <bean  id="simpleMappingExceptionResolver"
+           class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <!--<property name="defaultErrorView">-->
+            <!--<value>failure</value>-->
+        <!--</property>-->
+        <!--<property name="exceptionMappings">-->
+            <!--<props>-->
+                <!--&lt;!&ndash;key指定异常类型，标签中是视图名称，要拼前后缀&ndash;&gt;-->
+                <!--<prop key="java.lang.Exception">system-error</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+        <!-- 配置异常类型和具体视图页面的对应关系 -->
+        <property name="exceptionMappings">
+            <props>
+                <!-- key 属性指定异常全类名 -->
+                <!-- 标签体中写对应的视图（这个值要拼前后缀得到具体路径） -->
+                <prop key="java.lang.Exception">admin-login</prop>
+                <prop
+                        key="com.atguigu.crowd.exception.AccessForbiddenException">admin-login</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
